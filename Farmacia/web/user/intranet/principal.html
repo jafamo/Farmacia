@@ -1,0 +1,90 @@
+
+<style>
+ .carousel {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+ /* background-color: #DFE3E5;*/
+ background-color: #DADADA;
+  border-radius: 20px;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+ }
+ .items {
+  width: 3200px;
+  position: absolute;
+ }
+ .items > div {
+  width: 800px;
+  height: 80px;
+  font-size: 20px;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+ }
+ .nav {
+  position: absolute;
+  bottom: 5px;
+  right: 15px;
+ }
+ .button {
+  cursor: pointer;
+  font-weight: bold;
+ }
+</style>
+
+
+<div class="carousel" style="display:none;">
+ <div class="items">
+
+  <div>
+    <center><img src="images/logoFarmacia.jpg" widht="50%" height="50%"></center>
+  </div>
+
+  <div>
+    Contenido de la segunda pagina.
+  </div>
+
+  <div>
+  <p><h1>Pagina con otro indice</h1><br>
+  </p>
+    <img src="https://www.google.com/intl/en_com/images/srpr/logo3w.png">
+  </div>
+
+ </div>
+ <div class="nav">
+  <span class="button left-button">anterior</span>
+  &nbsp;&nbsp;
+  <span class="button right-button">siguiente</span>
+ </div>
+</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"> </script>
+<script>
+ var current_slide = 0; // zero-based
+ var slide_count = 3;
+ var slide_size = 600;
+
+ var Direction = {
+  LEFT: -1,
+  RIGHT: 1
+ };
+
+ /**
+ * Moves to the next slide using the direction (dx) parameter.
+ */
+ var nextSlide = function(dx) {
+  current_slide = (current_slide + slide_count + dx) % slide_count;
+
+  // Calculate the new value for css 'left' property and animate.
+  var left_offset = '-' + (current_slide * slide_size) + 'px';
+  $('.items').animate({'left': left_offset}, 300);
+ };
+
+ $('.right-button').click(nextSlide.bind(null, Direction.RIGHT));
+ $('.left-button').click(nextSlide.bind(null, Direction.LEFT));
+
+
+ $('.carousel').show();
+</script>

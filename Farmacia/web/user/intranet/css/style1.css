@@ -1,0 +1,16 @@
+p{
+	text-align: center;
+}
+ol li{
+	text-align: center;
+}
+h2{
+	text-align: center;
+}
+form{
+	text-align: center;
+}
+#cargando {
+         padding-left:2px; padding-right:2px; background-color:#CC0000; color:#FFFFFF; font-weight:bold;
+         right:3px; top:3px; position:fixed;
+       }

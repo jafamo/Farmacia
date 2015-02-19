@@ -1,0 +1,288 @@
+<!--
+Author: Jafamo
+Author URL: http://github.com/jafamo
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+	<head>
+
+		<title>Farmacia Paterna</title>
+		<link href="web/css/bootstrap.css" rel='stylesheet' type='text/css' />
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="web/js/jquery.min.js"></script>
+		 <!-- Custom Theme files -->
+		<link href="web/css/style.css" rel='stylesheet' type='text/css' />
+		<!-- CSS para las busquedas -->
+		 <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/themes/base/minified/jquery-ui.min.css" type="text/css" /> 
+		
+<!-- Custom  files for AUTOCOMPLETE Section: Productos -->
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+			<script type="text/javascript" src="http://code.jquery.com/ui/1.10.1/jquery-ui.min.js"></script>    
+			<script type="text/javascript">
+				$(function() {
+    
+   				 //autocomplete
+    			$(".auto").autocomplete({
+        		source: "web/php/search.php",
+        		minLength: 1
+    			});                
+
+			});
+		</script>
+
+
+
+   		 <!-- Custom Theme files -->
+   		 <!---- start-smoth-scrolling---->
+		<script type="text/javascript" src="web/js/move-top.js"></script>
+		<script type="text/javascript" src="web/js/easing.js"></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+		</script>
+		 <!---- start-smoth-scrolling---->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+		</script>
+		<!----webfonts--->
+		<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Playball' rel='stylesheet' type='text/css'>
+		<!---//webfonts--->
+		<!----start-top-nav-script---->
+		<script>
+			$(function() {
+				var pull 		= $('#pull');
+					menu 		= $('nav ul');
+					menuHeight	= menu.height();
+				$(pull).on('click', function(e) {
+					e.preventDefault();
+					menu.slideToggle();
+				});
+				$(window).resize(function(){
+	        		var w = $(window).width();
+	        		if(w > 320 && menu.is(':hidden')) {
+	        			menu.removeAttr('style');
+	        		}
+	    		});
+			});
+		</script>
+		<!----//End-top-nav-script---->
+	</head>
+	<body> 
+		<!----- start-header---->
+			<div id="home" class="header">
+					<div class="top-header">
+						<div class="container">
+						<div class="logo">
+							<a href="#">Manuel Serrano Cirujeda</a>
+						</div>
+						<!----start-top-nav---->
+						 <nav class="top-nav">
+							<ul class="top-nav">
+								<li class="active"><a href="#home" class="scroll">Inicio </a></li>
+								<li class="page-scroll"><a href="#work" class="scroll">Informacion</a></li>
+								<li class="page-scroll"><a href="#team" class="scroll">Guardias</a></li>
+								<li class="page-scroll"><a href="#precios" class="scroll">Precios</a></li>
+								<li class="contatct-active" class="page-scroll"><a href="#contact" class="scroll">Contacto</a>
+								<li > <a href="web/user/login/login.html">Login </li?
+
+								</li>
+
+							</ul>
+							<a href="#" id="pull"><img src="web/images/nav-icon.png" title="menu" /></a>
+						</nav>
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+			</div>
+			<!----- //End-header---->
+			<!----banner---->
+			<div class="banner text-center">
+				<div class="container">
+					<div class="banner-info">
+						<h1><span>AQUI</span></h1>
+						<p>Puede ir una foto de fondo de la farmacia.</p>
+						<label class="page-scroll"><a class="big-btn scroll" href="#work1"><span> </span></a></label>
+					</div>
+				</div>
+			</div>
+			<!----banner---->
+			<!---work---->
+			<div id="work" class="work">
+				<div id="work1" class="container">
+					<div class="head-one text-center">
+						<h2>Informacion</h2>
+						<span> </span>
+						<address>
+						<p>Farmacia Manuel Serrano Cirujeda &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  C\ Aldaya, 2    Paterna  46980 </p>
+						<p>Telefono: 961 826 820  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp email: <a href="mailto:farmaciaManuel@gmail.com"> farmaciaManuel</a>. </p>
+						</address>
+					</div>
+					<!----works---->
+					<!----images-hover-effects---->
+					<script src="web/js/jquery.hoverGrid.js"></script>
+					<link rel="stylesheet" type="text/css" href="web/css/jquery.hoverGrid.css">
+					<script type="text/javascript">
+					    $(document).ready(function() {
+					      $('#whatever').hoverGrid();
+					    });
+					</script>
+					<!----images-hover-effects---->
+					<div class="works">
+							<div id="whatever">
+								<div class="col-md-4 work-grid">
+								    <div class="item">
+								        <img  src="web/images/farmacia/image11.jpg" title="name" />
+								        <div class="caption" style="display: none;">
+								            <h2>Imagen 1</h2>
+								            
+								        </div>
+								    </div>  
+							    </div>  
+							    <div class="col-md-4 work-grid">
+								    <div class="item">
+								        <img  src="web/images/farmacia/image3.jpg" title="name" />
+								        <div class="caption" style="display: none;">
+								            <h2>Imagen 2</h2>
+								            <p>This is a caption to end all captions</p>
+								        </div>
+								    </div>  
+							    </div>    
+							    <div class="col-md-4 work-grid">
+								    <div class="item">
+								        <img  src="web/images/farmacia/image5.jpg" title="name" />
+								        <div class="caption" style="display: none;">
+								            <h2>Imagen 3</h2>
+								            <p>This is a caption to end all captions</p>
+								        </div>
+								    </div>  
+							    </div>    
+							    
+							    
+							   <span></span>
+							    
+							    <div class="clearfix"> </div>               
+							</div>
+					</div>
+					 <div class="clearfix"> </div>   
+					</div>
+				</div>
+					<!----//works---->
+					<!----team---->
+					<div id="team" class="team">
+						<div class="container">
+							<div class="head-one text-center team-head">
+								<h2>Guardias</h2>
+								<span> </span>
+								
+							</div>	
+							<center><iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;height=400&amp;wkst=1&amp;hl=es&amp;bgcolor=%23FFFFFF&amp;src=tbm5qtmd43f8dlcg9j4mjmfpac%40group.calendar.google.com&amp;color=%23182C57&amp;ctz=Europe%2FMadrid" style=" border-width:0 " width="800" height="400" frameborder="0" scrolling="no"></iframe></center>
+
+
+						</div>
+					</div>
+					<!----//team---->
+
+
+
+
+
+
+					<!----precios---->
+					<div id="precios" class="precios">
+						<div class="container">
+							<div class="head-one text-center team-head">
+								<h2>Precios</h2>
+								<span> </span>
+								<p>Introduce el posible nombre del producto a buscar para consultar su precio.</p>
+
+							</div>	
+							<center>
+								<div id="label">
+								<form action='' method='get'>
+        							<p><label>Producto: </label>  <input  type='text' name='descripcion' value='' class='auto'></p>
+    							</form>
+    							</div>
+							</center>
+
+							<span> </span>
+
+						</div>
+					</div>
+
+					<!----//precios---->
+					<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+				
+<span></span>
+
+
+					<!----Contact---->
+					<div id="contact" class="contact">
+						<div class="container">
+							<div class="head-one text-center">
+								<h2>contacto</h2>
+								<span> </span>
+							</div>
+							<div class="contact-grids">
+								<div class="col-md-5 contact-map">
+								<p>Donde nos encontramos </p>
+									<iframe src="https://www.google.com/maps/d/embed?mid=zWbfW-0fradM.kr88XSB_oVLI"></iframe>
+							
+
+
+								</div>
+								<div class="col-md-7 contact-form">
+								<p>Necesita contactar con nosotros? .</p>	
+								<form id="formulario" name="formulario" action="web/php/index.php" method="POST">
+									<textarea name="mensaje">Escriba su mensaje</textarea>
+									<input type="text" name="email"value="Tu@mail.com">
+									<input type="submit" value="Send"/>
+								</form>
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+					</div>
+					<!---//Contact--->
+					<!----footer---->
+					<div class="footer">
+						<div class="container">
+							<div class="footer-left">
+								<p><span>Farmacia</span> Paterna.</p>
+							</div>
+							<div class="footer-right">
+								<p>Creado por Javier Farinos <a href="http://github.com/jafamo"> github/jafamo</a></p>
+								<script type="text/javascript">
+									$(document).ready(function() {
+										/*
+										var defaults = {
+								  			containerID: 'toTop', // fading element id
+											containerHoverID: 'toTopHover', // fading element hover id
+											scrollSpeed: 1200,
+											easingType: 'linear' 
+								 		};
+										*/
+										
+										$().UItoTop({ easingType: 'easeOutQuart' });
+										
+									});
+								</script>
+									<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+					</div>
+					<!---//footer---->
+				</div>
+			</div>
+			
+	</body>
+</html>
+
